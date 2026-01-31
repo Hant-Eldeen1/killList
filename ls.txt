@@ -1,0 +1,81 @@
+[Adblock Plus 2.0]
+! Title: Custom Aggressive NSFW Smart Block
+! Purpose: Block hentai / porn by patterns + keywords + risky behaviors
+! Level: Aggressive
+! =======================================================
+
+
+! =======================================================
+! 1) CORE NSFW KEYWORD PATTERN (Domains + Paths + Queries)
+! =======================================================
+/(^|[\/\.\-_])(h[ae]ntai|hntai|hanime|nhentai|yaoi|ecchi|doujin|doujinshi|futanari|nsfw|18\+|adult|uncensored)([\/\.\-_]|$)/i
+
+
+! =======================================================
+! 2) MANGA / MANHWA / ANIME + ADULT COMBINATIONS
+! =======================================================
+/(\/|^)(manga|manhwa|anime|comic|comics|series)(\/|$).*(18|adult|nsfw|h[ae]ntai|yaoi|ecchi)/i
+
+
+! =======================================================
+! 3) TAG / SEARCH / CATEGORY / GENRE PATTERNS
+! =======================================================
+/(search|tag|tags|genre|category|browse|filter).*(h[ae]ntai|hntai|nsfw|adult|18)/i
+
+
+! =======================================================
+! 4) ARABIC NSFW KEYWORDS
+! =======================================================
+/(هنتاي|إباحي|اباحي|جنس|سكس|للكبار|بالغين|+18)/i
+
+
+! =======================================================
+! 5) TYPO-SQUATTING & MALICIOUS VARIANTS (ANTI-EVASION)
+! (مثل hentaoi / hentai0 / henta1 ...)
+! =======================================================
+/henta[io0l1]{1,2}/i
+
+
+! =======================================================
+! 6) GENERIC ADULT DOMAIN SHAPES
+! =======================================================
+/(^|\.)((xxx|porn|sex|adult)[a-z0-9\-]{0,20})\./i
+
+
+! =======================================================
+! 7) MEDIA FILES WITH NSFW SIGNALS
+! =======================================================
+/\.(mp4|webm|mkv|avi|mov|jpg|jpeg|png|gif|webp).*(h[ae]ntai|nsfw|adult|18)/i
+
+
+! =======================================================
+! 8) SMART BLOCKING INSIDE LARGE PLATFORMS (BY KEYWORDS)
+! =======================================================
+
+! X (Twitter)
+/x\.com\/.*(h[ae]ntai|hntai|nsfw|adult|18|ecchi)/i
+
+! Instagram
+/instagram\.com\/.*(h[ae]ntai|hntai|nsfw|adult|18|ecchi)/i
+
+! YouTube
+/youtube\.com\/.*(h[ae]ntai|nsfw|adult|18|ecchi)/i
+
+! itch.io (Games)
+/itch\.io\/.*(h[ae]ntai|nsfw|adult|18)/i
+
+
+! =======================================================
+! 9) FULL TIKTOK BLOCK (AS REQUESTED)
+! =======================================================
+||tiktok.com^
+||www.tiktok.com^
+||m.tiktok.com^
+||vt.tiktok.com^
+
+
+! =======================================================
+! 10) ADDITIONAL GENERIC SAFETY NET
+! (catches new / unknown sites using adult signals)
+! =======================================================
+/(^|[\/\.\-_])(xxx|porn|sex|nsfw|adult|18\+)([\/\.\-_]|$)/i
