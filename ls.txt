@@ -3,55 +3,8 @@
 ! Compatible: uBlock Origin / AdGuard
 ! =======================================================
 
-! ===============================
-! 1) EXPLICIT NSFW DOMAINS
-! ===============================
 ||arabshentai.com^
-||nhentai.net^
-||nhentai.to^
-||hanime.tv^
-||hentaihaven.xxx^
-||hentaifox.com^
-||hentaigasm.com^
-||hentaistream.com^
-||hentaiera.com^
-||hentai2read.com^
 ||hentai-time.com^
 ||nxxhentai.net^
-
-! ===============================
-! 2) GENERIC NSFW KEYWORDS AS DOMAINS
-! (this is what makes porn.txt powerful)
-! ===============================
-||*hentai*^
-||*porn*^
-||*xxx*^
-||*nsfw*^
-
-! ===============================
-! 3) COMMON ADULT NUMBER PATTERNS
-! ===============================
-||*18teen*^
-||*18porn*^
-||*18xxx*^
-||*18adult*^
-
-! ===============================
-! 4) ARABIC NSFW DOMAINS
-! ===============================
-||*هنتاي*^
-||*اباحي*^
-||*سكس*^
-
-! ===============================
-! 5) TIKTOK FULL BLOCK
-! ===============================
-||tiktok.com^
-||www.tiktok.com^
-||m.tiktok.com^
-||vt.tiktok.com^
-
-! ===============================
-! 6) OPTIONAL REGEX (SUPPORTING ONLY)
-! ===============================
-/(h[ae]ntai|hntai|nhentai|nsfw)/$document
+||hentaislayer.net^
+||ristohentai.com^
