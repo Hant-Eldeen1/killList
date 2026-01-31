@@ -18,6 +18,8 @@
 ||hentai2read.com^
 ||hentai-time.com^
 ||nxxhentai.net^
+||hentai-time.com^
+||nxxhentai.net^
 
 ! ===============================
 ! 2) GENERIC NSFW KEYWORDS AS DOMAINS
