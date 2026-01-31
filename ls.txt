@@ -1,77 +1,55 @@
 [Adblock Plus 2.0]
-! Title: Custom Aggressive NSFW Smart Block
-! Purpose: Block hentai / porn / nsfw content
-! Level: Aggressive
+! Title: Custom NSFW Domain Block (WORKING)
 ! Compatible: uBlock Origin / AdGuard
 ! =======================================================
 
-! =======================================================
-! 1) CORE NSFW KEYWORDS (URL / PATH / QUERY)
-! =======================================================
-/(h[ae]ntai|hntai|hanime|nhentai|yaoi|ecchi|doujin|doujinshi|futanari|uncensored|nsfw|\+18)/i
+! ===============================
+! 1) EXPLICIT NSFW DOMAINS
+! ===============================
+||arabshentai.com^
+||nhentai.net^
+||nhentai.to^
+||hanime.tv^
+||hentaihaven.xxx^
+||hentaifox.com^
+||hentaigasm.com^
+||hentaistream.com^
+||hentaiera.com^
+||hentai2read.com^
 
-! =======================================================
-! 2) MANGA / ANIME + NSFW COMBINATIONS
-! =======================================================
-/(manga|manhwa|anime|comic|comics|series).*(h[ae]ntai|yaoi|ecchi|nsfw|\+18)/i
+! ===============================
+! 2) GENERIC NSFW KEYWORDS AS DOMAINS
+! (this is what makes porn.txt powerful)
+! ===============================
+||*hentai*^
+||*porn*^
+||*xxx*^
+||*nsfw*^
 
-! =======================================================
-! 3) SEARCH / TAG / CATEGORY PAGES (contextual)
-! =======================================================
-/(search|tag|tags|genre|category|browse|filter).*(h[ae]ntai|hntai|nsfw|\+18)/i
+! ===============================
+! 3) COMMON ADULT NUMBER PATTERNS
+! ===============================
+||*18teen*^
+||*18porn*^
+||*18xxx*^
+||*18adult*^
 
-! =======================================================
-! 4) ARABIC NSFW KEYWORDS (fixed)
-! =======================================================
-/(هنتاي|إباحي|اباحي|سكس|للكبار|بالغين|\+18)/i
+! ===============================
+! 4) ARABIC NSFW DOMAINS
+! ===============================
+||*هنتاي*^
+||*اباحي*^
+||*سكس*^
 
-! =======================================================
-! 5) TYPO / EVASION VARIANTS (anti-typo/typosquatting)
-! =======================================================
-/henta[io0l1]{1,2}/i
-
-! =======================================================
-! 6) GENERIC ADULT DOMAINS (host-level shortcuts + pattern)
-! =======================================================
-||xxx^
-||porn^
-/(^|\.)((xxx|porn)[a-z0-9\-]{0,20})\./i
-
-! =======================================================
-! 7) MEDIA FILES WITH NSFW SIGNALS
-! =======================================================
-/\.(mp4|webm|mkv|avi|mov|jpg|jpeg|png|gif|webp).*(h[ae]ntai|nsfw|\+18)/i
-
-! =======================================================
-! 8) LARGE PLATFORMS – DOCUMENT-LEVEL + KEYWORD-BASED
-! (Block page/document when page contains porn keywords)
-! =======================================================
-
-! X (Twitter)
-||x.com^$document
-/x\.com\/.*(h[ae]ntai|hntai|nsfw|\+18|ecchi)/i
-
-! Instagram
-||instagram.com^$document
-/instagram\.com\/.*(h[ae]ntai|hntai|nsfw|\+18|ecchi)/i
-
-! YouTube
-||youtube.com^$document
-/youtube\.com\/.*(h[ae]ntai|nsfw|\+18|ecchi)/i
-
-! itch.io (games)
-||itch.io^$document
-/itch\.io\/.*(h[ae]ntai|nsfw|\+18)/i
-
-! =======================================================
-! 9) FULL TIKTOK BLOCK (HARD)
-! =======================================================
+! ===============================
+! 5) TIKTOK FULL BLOCK
+! ===============================
 ||tiktok.com^
 ||www.tiktok.com^
 ||m.tiktok.com^
 ||vt.tiktok.com^
 
-! =======================================================
-! 10) FINAL FAIL-SAFE (catch remaining patterns)
-! =======================================================
-/(h[ae]ntai|hntai)/i
+! ===============================
+! 6) OPTIONAL REGEX (SUPPORTING ONLY)
+! ===============================
+/(h[ae]ntai|hntai|nhentai|nsfw)/$document
